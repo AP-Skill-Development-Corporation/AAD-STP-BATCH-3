@@ -3,70 +3,63 @@ package com.muneiah.acivitylifecycles;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-TextView f;
+    TextView tv;
+
+    //First or Default Lifecycle Activity
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        f=findViewById(R.id.t1);
-        f.append("Oncreate \n");
-        Log.i("onCreate","App is create");
-        Toast.makeText(this, "created", Toast.LENGTH_SHORT).show();
+        tv=findViewById(R.id.textView);
+        Log.i("MainAcivity","onCreate() invoked");
+        tv.append("onCreate() \n");
+        Toast.makeText(this, "App is Created", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        f.append("Onstart \n");
-        Log.i("MainAcivity","App is started");
-        Toast.makeText(this, "started", Toast.LENGTH_SHORT).show();
-
+        Log.i("MainAcivity","onStart() invoked");
+        tv.append("onStart() \n");
+        Toast.makeText(this, "App is Started", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        f.append("Onresume \n");
-        Log.i("MainAcivity","App is resumed");
-        Toast.makeText(this, "resume", Toast.LENGTH_SHORT).show();
+        Log.i("MainAcivity","onResume() invoked");
+        tv.append("onResume() \n");
+        Toast.makeText(this, "App is Resumed", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        f.append("Onpause \n");
-        Toast.makeText(this, "on paued", Toast.LENGTH_SHORT).show();
-        Log.i("MainAcivity","App is paused");
+        Log.i("MainAcivity","onPause() invoked");
+        tv.append("onPause() \n");
+        Toast.makeText(this, "App is Paused", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        f.append("Onstop \n");
-        Toast.makeText(this, "onstop", Toast.LENGTH_SHORT).show();
-        Log.i("MainAcivity","App is stopped");
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        f.append("OnreStrart \n");
-        Toast.makeText(this, "restart", Toast.LENGTH_SHORT).show();
-        Log.i("MainAcivity","App is restrted");
+        Log.i("MainAcivity","onStop() invoked");
+        tv.append("onStop()\n");
+        Toast.makeText(this, "Now App is Stopped", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        f.append("OnDestroy \n");
-        Toast.makeText(this, "App Closed", Toast.LENGTH_SHORT).show();
-        Log.i("MainAcivity","App is destroy");
+        Log.i("MainAcivity","onDestroy() invoked");
+        tv.append("onDestroy()");
+        Toast.makeText(this, "Now App is Destroyed", Toast.LENGTH_SHORT).show();
     }
 }
