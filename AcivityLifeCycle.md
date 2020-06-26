@@ -1,4 +1,4 @@
-# Activity Lifecycl
+# Activity Lifecycles
 
 See it in Activity Lifecycle [at Android Developers](https://developer.android.com/guide/components/activities/activity-lifecycle#:~:text=To%20navigate%20transitions%20between%20stages,activity%20enters%20a%20new%20state.)
 
