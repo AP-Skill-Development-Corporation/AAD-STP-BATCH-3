@@ -28,4 +28,29 @@
         android:layout_height="wrap_content"
         android:text="open Second screen"
         android:onClick="show_secondActivity"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:text="Implicit Intent "/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_web_input"
+            android:hint="Enter the url "/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="web"
+            android:id="@+id/webButton"
+            />
+
+    </LinearLayout>
 </LinearLayout>
