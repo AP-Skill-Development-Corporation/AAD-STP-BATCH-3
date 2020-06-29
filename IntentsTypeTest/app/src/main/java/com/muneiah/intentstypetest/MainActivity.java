@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+    /*For Declare the View Components Edittext and Button*/
 EditText et,et2;
 Button btn;
 public static final String KEY="apssdc.in";
@@ -17,9 +18,11 @@ public static final String KEY="apssdc.in";
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /*Inisilize the View through its id's */
         et=findViewById(R.id.et_user_input);
         et2=findViewById(R.id.et_web_input);
         btn=findViewById(R.id.webButton);
+        /*Another type of View Event Handiling by using view object*/
        btn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
@@ -30,7 +33,7 @@ public static final String KEY="apssdc.in";
            }
        });
     }
-
+        /*When the Second Button Event Handiling (Through xml onClick() Listener )*/
     public void show_secondActivity(View view) {
         String data=et.getText().toString();
         Intent int_obj=new Intent(this,SecondActivity.class);

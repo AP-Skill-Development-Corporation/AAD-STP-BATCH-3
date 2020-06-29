@@ -9,12 +9,15 @@
     tools:context=".SecondActivity"
     android:gravity="center"
     android:background="@drawable/aplogos">
+    <!--for displaying the Data design TEXTVIEW -->
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/tv_result"
     android:text="here displays Data"
     android:textSize="40sp"
+
+    android:layout_margin="20sp"
     android:layout_gravity="center"
     />
 </LinearLayout>

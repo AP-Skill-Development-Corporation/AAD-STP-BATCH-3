@@ -13,6 +13,7 @@ TextView label;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         label=findViewById(R.id.tv_result);
+        /*Get the Intent for data getting*/
         Intent i=getIntent();
        String d= i.getStringExtra(MainActivity.KEY);
        label.setText(d);

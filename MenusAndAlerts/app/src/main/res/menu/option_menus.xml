@@ -7,6 +7,9 @@
         />
     <item android:title="Apssdc"
         android:id="@+id/org"/>
-    <item android:title="Search"
+    <item
+        android:title="Search"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_search_black_24dp"
         android:id="@+id/search"/>
 </menu>
