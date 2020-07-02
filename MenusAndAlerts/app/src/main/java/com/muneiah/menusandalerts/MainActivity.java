@@ -6,6 +6,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,13 +16,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 Button datePicker,timePicker;
-int m,d,y;
+int m,d,y,min,sec,hour;
 TextView date_result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ TextView date_result;
         /*for delete entire line shift + delete*/
         date_result=findViewById(R.id.tv);
         datePicker.setOnClickListener(this);
+        timePicker.setOnClickListener(this);
     }
 
     @Override
@@ -91,7 +94,11 @@ TextView date_result;
         d=c.get(Calendar.DAY_OF_MONTH);
         m=c.get(Calendar.MONTH);
         y=c.get(Calendar.YEAR);
-        DatePickerDialog datePickerDialog=new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+        min=c.get(Calendar.MINUTE);
+        sec=c.get(Calendar.SECOND);
+        hour=c.get(Calendar.HOUR_OF_DAY);
+
+       /* DatePickerDialog datePickerDialog=new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 String date=year+"-"+(month+1)+"-"+dayOfMonth;
@@ -99,6 +106,17 @@ TextView date_result;
                 Toast.makeText(MainActivity.this, "Date is: "+date, Toast.LENGTH_SHORT).show();
             }
         },y,m,d);
-        datePickerDialog.show();
+        datePickerDialog.show();*/
+        TimePickerDialog timePickerDialog=new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                String time=hourOfDay+"-"+minute;
+                date_result.setText(time);
+            }
+        },hour,min,false);
+        timePickerDialog.show();
     }
+
+
+
 }
