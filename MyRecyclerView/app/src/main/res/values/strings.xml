@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">MyRecyclerView</string>
+    <string-array name="movieTitles">
+        <item>AA</item>
+        <item>Bhahuhali</item>
+        <item>Chirutha</item>
+        <item>Dookudu</item>
+        <item>Eega</item>
+        <item>Fidha</item>
+        <item>Gabbarsing</item>
+        <item>Hello</item>
+        <item>I</item>
+        <item>Jayam</item>
+    </string-array>
 </resources>
