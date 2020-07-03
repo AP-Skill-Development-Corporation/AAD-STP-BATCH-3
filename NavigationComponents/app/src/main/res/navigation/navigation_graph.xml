@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.muneiah.navigationcomponents.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_redFragment"
+            app:destination="@id/redFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_whiteFragment"
+            app:destination="@id/whiteFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_greenFragment"
+            app:destination="@id/greenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/redFragment"
+        android:name="com.muneiah.navigationcomponents.RedFragment"
+        android:label="fragment_red"
+        tools:layout="@layout/fragment_red" />
+    <fragment
+        android:id="@+id/whiteFragment"
+        android:name="com.muneiah.navigationcomponents.WhiteFragment"
+        android:label="fragment_white"
+        tools:layout="@layout/fragment_white" />
+    <fragment
+        android:id="@+id/greenFragment"
+        android:name="com.muneiah.navigationcomponents.GreenFragment"
+        android:label="fragment_green"
+        tools:layout="@layout/fragment_green" />
+</navigation>
