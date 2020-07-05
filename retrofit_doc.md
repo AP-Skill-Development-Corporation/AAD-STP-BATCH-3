@@ -3,7 +3,35 @@
 * For this document, we are going to see how to use Retrofit HTTP client in your Android application.
 * [Official link for Retrofit](https://square.github.io/retrofit/)
 
+### What Is Retrofit?
+
+* **Retrofit is a type-safe HTTP client for Android and Java.** Retrofit makes it easy to connect to a REST web service by translating the API into Java interfaces. In this tutorial, I'll show you how to use one of most popular and often-recommended HTTP libraries available for Android. 
+
+* This powerful library makes it easy to consume JSON or XML data which is then parsed into Plain Old Java Objects (POJOs). GET, POST, PUT, PATCH, and DELETE requests can all be executed. 
+
+* Like most open-source software, Retrofit was built on top of some other powerful libraries and tools. Behind the scenes, Retrofit makes use of OkHttp (from the same developer) to handle network requests. Also, Retrofit does not have a built-in any JSON converter to parse from JSON to Java objects. Instead it ships support for the following JSON converter libraries to handle that: 
+```
+	* Gson: com.squareup.retrofit:converter-gson
+	* Jackson: com.squareup.retrofit:converter-jackson
+	* Moshi: com.squareup.retrofit:converter-moshi
+```
+* For Protocol Buffers, Retrofit supports:
+```
+Protobuf: com.squareup.retrofit2:converter-protobuf
+Wire: com.squareup.retrofit2:converter-wire
+```
+**And for XML, Retrofit supports:**
+
+```
+Simple Framework: com.squareup.retrofit2:converter-simpleframework
+```
+#### So Why Use Retrofit?
+* Developing your own type-safe HTTP library to interface with a REST API can be a real pain: you have to handle many functionalities such as making connections, caching, retrying failed requests, threading, response parsing, error handling, and more. Retrofit, on the other hand, is very well planned, documented, and tested—a battle-tested library that will save you a lot of precious time and headaches.
+
+In this , I will explain how to use Retrofit 2 to handle network requests by building a simple app to query recent answers from the Stack Exchange API. We'll perform GET requests by specifying an endpoint—/photos, appended to the base URL  get the results and display them in a recycler view. I will also show you how to do this with RxJava for easy management of the flow of state and data.
+
 **Retrofit is an awesome type-safe HTTP client for Android and Java built by awesome folks at Square. Retrofit makes it easy to consume JSON or XML data which is parsed into Plain Old Java Objects (POJOs).**
+
 ####  So, without any further delays, lets get started by first creating a new project in Android Studio.
 1. Go to File ⇒ New Project. When it prompts you to select the default activity, select Empty Activity and proceed.
 2. Open **build.gradle in (Module:app)** and add **Retrofit, Picasso, RecyclerView, Gson dependencies** like this.
