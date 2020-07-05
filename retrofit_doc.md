@@ -5,7 +5,7 @@
 
 ### What Is Retrofit?
 
-* **Retrofit is a type-safe HTTP client for Android and Java.** Retrofit makes it easy to connect to a REST web service by translating the API into Java interfaces. In this tutorial, I'll show you how to use one of most popular and often-recommended HTTP libraries available for Android. 
+* **Retrofit is a type-safe HTTP client for Android and Java.** Retrofit makes it easy to connect to a REST web service by translating the API into Java interfaces. In this , I'll show you how to use one of most popular and often-recommended HTTP libraries available for Android. 
 
 * This powerful library makes it easy to consume JSON or XML data which is then parsed into Plain Old Java Objects (POJOs). GET, POST, PUT, PATCH, and DELETE requests can all be executed. 
 
