@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COVID19 India Today Status!"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="40sp"
+         />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:layout_margin="10dp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:id="@+id/date_tv"/>
+    <TextView
+        android:textSize="25sp"
+        android:layout_margin="10dp"
+        android:textColor="#00BCD4"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Active Cases"
+        android:id="@+id/active_tv"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Conformed Cases"
+        android:textSize="25sp"
+        android:id="@+id/conformed_tv"
+        android:layout_margin="10dp"
+        android:textColor="#FF5722"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Death Cases"
+        android:layout_margin="10dp"
+        android:textSize="25sp"
+        android:textColor="#9C27B0"
+        android:gravity="center"
+        android:id="@+id/deaths_tv"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recovred Cases"
+        android:layout_margin="10dp"
+        android:textColor="#8BC34A"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:id="@+id/recovered_tv"/>
+
+</LinearLayout>
