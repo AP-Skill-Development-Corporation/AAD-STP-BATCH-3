@@ -68,11 +68,10 @@ Android Support	|SQLite	|Room(semi-sql), GreenDAO, Realm
    * entities = {EntityClassOne.class, ....} is used to define list of entities for database
    
 ### Room Architecture
-  
-<<<<<<< HEAD
+ 
 ### For Adding Dependancys :
 
-**At build.gradle file(app:module)
+**At build.gradle file(app:module)**
 ```
 android{
      compileOptions {
@@ -94,7 +93,7 @@ android{
 
 ```
 
-**at build.gradle(project level)
+**at build.gradle(project level)**
 ```
 ext {
     roomVersion = '2.2.1'
