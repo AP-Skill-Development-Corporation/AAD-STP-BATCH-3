@@ -46,4 +46,3 @@ dependencies {
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$rootProject.archLifecycleVersion"
     implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha04'
 }
-

@@ -6,48 +6,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:layout_margin="2dp">
-
+    tools:context=".UpdateActivity">
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Room DataBase Demo"
-        android:textSize="40sp"
-        android:layout_gravity="center"
-        android:textColor="@color/colorPrimary"
-         />
-
+        android:text="Update Details"
+        android:textSize="30sp"
+        android:gravity="center"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_margin="10dp"
         android:layout_height="wrap_content"
         android:hint="Enter the Student name"
-        android:id="@+id/student_name"/>
+        android:id="@+id/update_name"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_margin="10dp"
         android:layout_height="wrap_content"
         android:hint="Enter the Student Rollnumber"
-        android:id="@+id/student_rollnumber"/>
+        android:id="@+id/update_rollnumber"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="save"
+        android:text="Update"
         android:layout_margin="10dp"
-        android:onClick="saveData"/>
- <!--   <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="retrive"
-        android:layout_margin="10dp"
-        android:onClick="retriveData"/>-->
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rec"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp" />
-
+        android:onClick="updateData"/>
 </LinearLayout>

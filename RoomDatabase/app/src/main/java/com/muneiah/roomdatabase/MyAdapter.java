@@ -1,6 +1,7 @@
 package com.muneiah.roomdatabase;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +34,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.d.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.dataBase.studentDAO().deleteData(list.get(position));
+               // MainActivity.dataBase.studentDAO().deleteData(list.get(position)); //normal db
+                //live db
+                MainActivity.myViewModel.delete(list.get(position));
             }
         });
     }
@@ -52,6 +55,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             r=itemView.findViewById(R.id.rollnam);
             e=itemView.findViewById(R.id.edit);
             d=itemView.findViewById(R.id.delete);
+            e.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String nn=n.getText().toString();
+                    String rr=r.getText().toString();
+                    Intent i=new Intent(ctx,UpdateActivity.class);
+                    i.putExtra("name",nn);
+                    i.putExtra("roll",rr);
+                    ctx.startActivity(i);
+
+                }
+            });
 
         }
     }
